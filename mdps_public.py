@@ -190,7 +190,7 @@ def EA_Alpha_thal_prediction(input_data):
      
 	 prediction = loaded_model.predict(scaled_data)
      
-     print(input_data_as_numpy_array)
+     #print(input_data_as_numpy_array)
 	 print(scaled_data)
      print(prediction)
 

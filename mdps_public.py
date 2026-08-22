@@ -181,12 +181,12 @@ def main():
 def EA_Alpha_thal_prediction(input_data):
   
     # changing the input_data to numpy array
-	 input_data_as_numpy_array = np.asarray(input_data)
+	 input_data_as_numpy_array = np.asarray([[input_data]])
 
     # reshape the array as we are predicting for one instance
-     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    # input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	 
-	 scaled_data = scaler.transform(input_data_reshaped)
+	 scaled_data = scaler.transform(input_data_as_numpy_array)
      
 	 prediction = loaded_model.predict(scaled_data)
      

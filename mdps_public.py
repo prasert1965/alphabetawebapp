@@ -183,9 +183,9 @@ def EA_Alpha_thal_prediction(input_data):
 	prediction_label = [np.argmax(prediction)]
 	#print(prediction_label)
 	if(prediction[0] == 0):
-  		print('This person is alpha thal 1 carrier')
+  	  return 'This person is alpha thal 1 carrier'
 	else:
-  		print('This person is Beta thal carrier')
+  		return 'This person is Beta thal carrier'
 	
 	# changing the input_data to numpy array
 	#input_data_as_numpy_array = np.asarray(input_data)

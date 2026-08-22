@@ -59,7 +59,24 @@ filename = 'alphabetatrained_model.sav'
 
 loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 
-scaler = pickle.load(loaded_model)
+def EA_Alpha_thal_prediction(input_data):
+  
+
+    # changing the input_data to numpy array
+     input_data_as_numpy_array = np.asarray(input_data)
+
+    # reshape the array as we are predicting for one instance
+     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+     prediction = loaded_model.predict(input_data_reshaped)
+     print(input_data_as_numpy_array)
+     print(prediction)
+
+     if (prediction[0] == 0):
+      return 'This person is alpha thalassemia carrier'
+     else:
+       return 'This person is beta thalassemia carrier'
+  
 
 # giving a title  
 	# st.title('Web for prediction Alpha Thalassemia carrier')   
@@ -173,38 +190,7 @@ def main():
 		   add_userdata(new_user,make_hashes(new_passwd))
 		   st.success("You have successfully created an account.Go to the Login Menu to login")
 
-def EA_Alpha_thal_prediction(input_data):
 
-	input_data_as_numpy_array = np.asarray(input_data)
-	#reshape the numpy array as we are prediction for one data point
-	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-	print(input_data_reshaped)
-	#standarddizing the input data
-	input_data_std = Scaler.transform(input_data_reshaped)
-	print(input_data_std)
-	prediction = loaded_model.predict(input_data_std)
-	print(prediction)
-	#prediction_label = [np.argmax(prediction)]
-	#print(prediction_label)
-	if(prediction[0] == 0):
-  	  return 'This person is alpha thal 1 carrier'
-	else:
-  		return 'This person is Beta thal carrier'
-	
-	# changing the input_data to numpy array
-	#input_data_as_numpy_array = np.asarray(input_data)
-
-	# reshape the array as we are predicting for one instance
-	#input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-
-	#prediction = loaded_model.predict(input_data_reshaped)
-	#print(input_data_as_numpy_array)
-	#print(prediction)
-
-	#if (prediction[0] == 0):
-   	# return 'This person is alpha thalassemia carrier'
-	#else:
-   	#   return 'This person is beta thalassemia carrier'
 
 # giving a title  
 #	st.title('Web for prediction Alpha Thalassemia carrier')   

@@ -58,8 +58,7 @@ current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 filename = 'alphabetatrained_model.sav'
 
 scaler = StandardScaler()
-Scaler.fit(x)
-StandardScaler(copy=True, with_mean=True, with_std=True)
+
 loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 
 	# giving a title  

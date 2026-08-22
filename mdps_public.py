@@ -51,9 +51,9 @@ tz_thai = pytz.timezone('Asia/Bangkok')
 now_thai = datetime.now(tz_thai)
 current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 
-loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
+#loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 
-#loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
+loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 
 # giving a title  
 	# st.title('Web for prediction Alpha Thalassemia carrier')   

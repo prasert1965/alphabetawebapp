@@ -192,7 +192,7 @@ def EA_Alpha_thal_prediction(input_data):
      
      #print(input_data_as_numpy_array)
 	 print(scaled_data)
-     print(prediction)
+     #print(prediction)
 
      if (prediction[0] == 0):
       return 'This person is alpha thalassemia carrier'

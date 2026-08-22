@@ -173,7 +173,7 @@ def main():
 
 def EA_Alpha_thal_prediction(input_data):
 
-	input_data_as_numpy_array = np.asarray(input_data)
+	input_data_as_numpy_array = np.asarray([input_data])
 	#reshape the numpy array as we are prediction for one data point
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	print(input_data_reshaped)

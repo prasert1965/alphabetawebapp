@@ -56,7 +56,7 @@ current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 
 #loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 filename = 'alphabetatrained_model.sav'
-#scaler = standardscaler()
+scaler = standardscaler()
 scaler = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 
@@ -179,7 +179,7 @@ def EA_Alpha_thal_prediction(input_data):
 
 	# reshape the array as we are predicting for one instance
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-	scaled_data = scaler.transform(input_data_reshaped)
+	scaled_data = scaler.fit(input_data_reshaped)
 	prediction = loaded_model.predict_prob(input_data_reshaped)
 	
 	print(input_data_as_numpy_array)

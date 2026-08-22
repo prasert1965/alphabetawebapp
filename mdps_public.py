@@ -123,7 +123,7 @@ def main():
 				
 				if st.button('Prediction Beta thal. Click'):        
 		   		    
-					diagnosis = EA_Alpha_thal_prediction([[AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2]])  
+					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2])  
 				
 				st.success(diagnosis)
        
@@ -178,8 +178,8 @@ def EA_Alpha_thal_prediction(input_data):
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	print(input_data_reshaped)
 	#standarddizing the input data
-	#scalar.fit(input_data_reshaped)
-	input_data_std = Scaler.transform(input_data_reshaped)
+	f=scalar.fit(input_data_reshaped)
+	input_data_std = Scaler.transform(f)
 	print(input_data_std)
 	prediction = loaded_model.predict(input_data_std)
 	print(prediction)

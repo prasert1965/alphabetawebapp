@@ -177,7 +177,7 @@ def EA_Alpha_thal_prediction(input_data):
 	print(input_data_reshaped)
 	#standarddizing the input data
 	#input_data_std = Scaler.transform(input_data_reshaped)
-	print(input_data_std)
+	#print(input_data_std)
 	prediction = loaded_model.predict(input_data_reshaped)
 	print(prediction)
 	prediction_label = [np.argmax(prediction)]

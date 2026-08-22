@@ -39,13 +39,13 @@ from fpdf import FPDF
 import streamlit.components.v1 as components
 from datetime import datetime
 
-hide_style = """
-    <style>
-    #GithubIcon {visibility: hidden;}
-    #MainMenu {visibility: hidden;}
-	Header {visibility: hidden;}
-	</style>
-"""
+#hide_style = """
+#    <style>
+#    #GithubIcon {visibility: hidden;}
+#    #MainMenu {visibility: hidden;}
+#	Header {visibility: hidden;}
+#	</style>
+#"""
 
 tz_thai = pytz.timezone('Asia/Bangkok')
 now_thai = datetime.now(tz_thai)
@@ -59,7 +59,7 @@ loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 	# st.title('Web for prediction Alpha Thalassemia carrier')   
 def main():
 #	"""Simple Login App"""
-	st.markdown(hide_style, unsafe_allow_html=True)
+#	st.markdown(hide_style, unsafe_allow_html=True)
 #st.title("Simple Login App")
 	
 	menu = ["Home","Login","SignUp"]

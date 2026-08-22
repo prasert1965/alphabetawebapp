@@ -41,7 +41,7 @@ import joblib
 import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-Scaler= StandardScaler()
+
 #hide_style = """
 #    <style>
 #    #GithubIcon {visibility: hidden;}
@@ -57,14 +57,8 @@ current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 #loaded_model = pickle.load(open('EAtrained_model.sav', 'rb'))
 filename = 'alphabetatrained_model.sav'
 
-
-#loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
-
-with open('alphabetatrained_model.sav', 'rb') as f:
-    scaler = pickle.load(f)
-
-with open('alphabetatrained_model.sav', 'rb') as f:
-    model = pickle.load(f)
+scaler = pickle.load(open('alphabetatrained_model.sav', 'rb'))
+loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
 
 	# giving a title  
 	# st.title('Web for prediction Alpha Thalassemia carrier')   
@@ -188,7 +182,7 @@ def EA_Alpha_thal_prediction(input_data):
 	 
 	 scaled_data = scaler.transform(input_data_as_numpy_array)
      
-	 prediction = model.predict(scaled_data)
+	 prediction = loaded_model.predict(scaled_data)
      
      print(input_data_as_numpy_array)
 	 print(scaled_data)

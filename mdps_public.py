@@ -123,7 +123,7 @@ def main():
 				
 				if st.button('Prediction Beta thal. Click'):        
 		   		    
-					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2])  
+					diagnosis = EA_Alpha_thal_prediction([[AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2]])  
 				
 				st.success(diagnosis)
        

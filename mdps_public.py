@@ -37,6 +37,7 @@ import datetime
 import tempfile
 from fpdf import FPDF
 import streamlit.components.v1 as components
+import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 

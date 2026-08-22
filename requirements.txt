@@ -3,7 +3,7 @@ numpy
 streamlit 
 streamlit-option-menu
 pyodbc
-jolib == 1.5.3 
+jolib
 pyod
 fpdf
 fpdf2

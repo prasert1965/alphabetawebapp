@@ -2,7 +2,7 @@ pandas == 2.2.3
 numpy == 2.1.3
 streamlit 
 streamlit-option-menu
-sklearn == 1.6.1
+sklearn
 pyodbc
 jolib == 1.5.3 
 pyod

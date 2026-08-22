@@ -180,7 +180,7 @@ def EA_Alpha_thal_prediction(input_data):
 	# reshape the array as we are predicting for one instance
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	scaled_data = scaler.transform(input_data_reshaped)
-	prediction = loaded_model.predict(input_data_reshaped)
+	prediction = loaded_model.predict_prob(input_data_reshaped)
 	
 	print(input_data_as_numpy_array)
 	print(input_data_reshaped)

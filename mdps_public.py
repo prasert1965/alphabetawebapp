@@ -41,7 +41,7 @@ import joblib
 import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-#scaler = joblib.load('scaler.pkl')
+Scaler= StandardScaler()
 #hide_style = """
 #    <style>
 #    #GithubIcon {visibility: hidden;}

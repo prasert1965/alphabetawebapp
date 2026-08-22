@@ -58,8 +58,10 @@ current_time_str = now_thai.strftime("%d/%m/%y time %H:%M minute.")
 filename = 'alphabetatrained_model.sav'
 
 loaded_model = pickle.load(open('alphabetatrained_model.sav', 'rb'))
+with open('alphabetatrained_model.sav', 'rb') as f:
+scaler = pickle.load(f)
 
-# giving a title  
+	# giving a title  
 	# st.title('Web for prediction Alpha Thalassemia carrier')   
 def main():
 #	"""Simple Login App"""

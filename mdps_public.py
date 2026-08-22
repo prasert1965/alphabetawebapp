@@ -41,6 +41,7 @@ import joblib
 import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
+from sklearn.preprocessing import MinMaxScaler
 
 #hide_style = """
 #    <style>

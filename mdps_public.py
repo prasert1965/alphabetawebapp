@@ -182,7 +182,7 @@ def EA_Alpha_thal_prediction(input_data):
 	scaler = MinMaxScaler()
 	#Scaler.fit_transform(input_data_reshaped)
 	
-	scaled_data = scaler.fit_transform(input_data_reshaped)
+	scaled_data = scaler.transform(input_data_reshaped)
 	prediction = loaded_model.predict(input_data_reshaped)
 	
 	print(input_data_as_numpy_array)

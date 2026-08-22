@@ -103,25 +103,25 @@ def main():
 		   			MCHC = st.text_input('MCHC (g/dl)')
 				with col4:
 		   			RDW = st.text_input('RDW (fl)')
-				#with col1:
-				#	HbA2 = st.text_input('HbA2 (%)')				
+				with col1:
+					HbA2 = st.text_input('HbA2 (%)')				
 				
 				# code for Prediction
 				diagnosis = ''
     
 				# creating a button for Prediction 
         
-				if st.button('Prediction result Pls. Click'):        
+				#if st.button('Prediction result Pls. Click'):        
 		   		    
-					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])               
+				#	diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])               
 				
-				st.success(diagnosis)
+				#st.success(diagnosis)
 				
 				#if st.button('Prediction Beta thal. Click'):        
 		   		    
-				#	diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2])  
+					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbA2])  
 				
-				#st.success(diagnosis)
+				st.success(diagnosis)
        
 				# getting the input data from the user
 				
@@ -182,7 +182,7 @@ def EA_Alpha_thal_prediction(input_data):
 	if (prediction[0] == 0):
    	 return 'This person is alpha thalassemia carrier'
 	else:
-   	   return 'This person is not alpha thalassemia carrier'
+   	   return 'This person is beta thalassemia carrier'
 
 # giving a title  
 #	st.title('Web for prediction Alpha Thalassemia carrier')   

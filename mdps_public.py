@@ -124,8 +124,8 @@ def main():
 				
 				if st.button('Prediction Beta thal. Click'):        
 		   		    try:
-						age = float(AGE) if AGE else 0.0
-						hct = float(HCT) if HCT else 0.0
+						age = float([AGE]) if AGE else 0.0
+						hct = float([HCT]) if HCT else 0.0
 						hgb = float(HGB) if HGB else 0.0
 						rbc = float(RBC) if RBC else 0.0
 						mcv = float(MCV) if MCV else 0.0

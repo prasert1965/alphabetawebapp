@@ -110,15 +110,15 @@ def main():
 		   			RDW = st.text_input('RDW (fl)')
 				with col1:
 					HBAII = st.text_input('HBAII (%)')			
-				age = float(AGE)
-				hct = float(HCT)
-				hgb = float(HGB)
-				rbc = float(RBC)
-				mcv = float(MCV)
-				mch = float(MCH)
-				mchc = float(MCHC)
-				rdw = float(RDW)
-				hbaii = float(HBAII)
+					age = float(AGE)
+					hct = float(HCT)
+					hgb = float(HGB)
+					rbc = float(RBC)
+					mcv = float(MCV)
+					mch = float(MCH)
+					mchc = float(MCHC)
+					rdw = float(RDW)
+					hbaii = float(HBAII)
 				# code for Prediction
 				diagnosis = ''
     

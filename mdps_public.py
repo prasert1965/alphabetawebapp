@@ -91,7 +91,7 @@ def main():
 				st.success("Logged In as {}".format(username))
 
 				# getting the input data from the user
-				col1, col2, col3, col4 = st.columns(4)
+				col1, col2, col3, col4 = st.columns(5)
 				with col1:
 			   		AGE = st.text_input('AGE (years)')
 				with col2:
@@ -100,15 +100,15 @@ def main():
 		   			HGB = st.text_input('Hemaglobin (g/dl)')
 				with col4:
 		   			RBC = st.text_input('RBC count(10^6 cells/cumm')
-				with col1:
+				with col5:
 		   			MCV = st.text_input('MCV (fl)')
-				with col2:
-		   			MCH = st.text_input('MCH (pg)')
-				with col3:
-		   			MCHC = st.text_input('MCHC (g/dl)')
-				with col4:
-		   			RDW = st.text_input('RDW (fl)')
 				with col1:
+		   			MCH = st.text_input('MCH (pg)')
+				with col2:
+		   			MCHC = st.text_input('MCHC (g/dl)')
+				with col3:
+		   			RDW = st.text_input('RDW (fl)')
+				with col4:
 					HBAII = st.text_input('HBAII (%)')			
 					
 				# code for Prediction

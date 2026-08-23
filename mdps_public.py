@@ -110,7 +110,25 @@ def main():
 		   			RDW = st.text_input('RDW (fl)')
 				with col1:
 					HBAII = st.text_input('HBAII (%)')			
-				
+				def paese_number(text):
+					"""converts string to int or float, or none if invalid/empty."""
+					if not text.strip():
+						reture None
+					try:
+						# check if it's an integer first
+						val = float(text)
+						return int(val) if val.is_integer() else val
+					except ValueErroe:
+						return None
+				age = parse_number(AGE)
+				hct = prase_number(HCT)
+				hgb = prase_number(HGB)
+				rbc = prase_number(RBC)
+				mcv = prase_number(MCV)
+				mch = prase_number(MCH)
+				mchc = prase_number(MCHC)
+				rdw = prase_number(RDW)
+				hbaii = prase_number(HBAII)
 				# code for Prediction
 				diagnosis = ''
     
@@ -123,8 +141,8 @@ def main():
 				#st.success(diagnosis)
 				
 				if st.button('Prediction Beta thal. Click'):        
-		   		    age = int([AGE]), hct = int([HCT]), hgb = int([HGB]), rbc = int([RBC]), mcv = int([MCV]), mch = int([MCH]), mchc = int([MCHC]), rdw = int([RDW]), hbaii = int([HBAII])
-					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HBAII])  
+		   		    
+					diagnosis = EA_Alpha_thal_prediction([age, hct, hgb, rbc, mcv, mch, mchc, rdw, hbaii])  
 				
 				st.success(diagnosis)
        

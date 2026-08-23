@@ -123,7 +123,8 @@ def main():
 				#st.success(diagnosis)
 				
 				if st.button('Prediction Beta thal. Click'):        
-		   		 	try:
+		   		 	
+					try:
 						age = float(AGE) if AGE else 0.0
 						hct = float(HCT) if HCT else 0.0
 						hgb = float(HGB) if HGB else 0.0
@@ -133,8 +134,8 @@ def main():
 						mchc = float(MCHC) if MCHC else 0.0
 						rdw = float(RDW) if RDW else 0.0
 						hbaii = float(HBAII) if HBAII else 0.0
-					st.success(f"Converted number: {my_number}")
-					except ValueError:
+					st.success
+					
   				st.error("Please enter a valid number.")
 					
 					diagnosis = EA_Alpha_thal_prediction([age, hct, hgb, rbc, mcv, mch, mchc, rdw, hbaii])  

@@ -44,13 +44,13 @@ from datetime import datetime
 
 scaler = StandardScaler()
 
-#hide_style = """
-#    <style>
-#    #GithubIcon {visibility: hidden;}
-#    #MainMenu {visibility: hidden;}
-#	Header {visibility: hidden;}
-#	</style>
-#"""
+hide_style = """
+    <style>
+    #GithubIcon {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+	Header {visibility: hidden;}
+	</style>
+"""
 
 tz_thai = pytz.timezone('Asia/Bangkok')
 now_thai = datetime.now(tz_thai)

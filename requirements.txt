@@ -8,7 +8,7 @@ jolib == 1.5.3
 pyod
 fpdf
 fpdf2 
-matplotlib == 3.10.0
+matplotlib
 pytz
 scipy
 Cython

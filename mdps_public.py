@@ -42,6 +42,7 @@ import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.feature_extraction.text import TfidfVectorizer
 vectorizer = TfidfVectorizer()
 #hide_style = """
 #    <style>

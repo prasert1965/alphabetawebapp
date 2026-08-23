@@ -11,5 +11,5 @@ fpdf2
 matplotlib
 pytz
 scipy
-Cython
-threadpoolctl
+
+

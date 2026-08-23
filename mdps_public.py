@@ -41,9 +41,7 @@ import joblib
 import sklearn
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.feature_extraction.text import TfidfVectorizer
-vectorizer = TfidfVectorizer()
+
 #hide_style = """
 #    <style>
 #    #GithubIcon {visibility: hidden;}
@@ -180,8 +178,7 @@ def EA_Alpha_thal_prediction(input_data):
 	# reshape the array as we are predicting for one instance
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	
-	numeric_vector = vectorizer.transform(input_data_reshaped) 
-	prediction = loaded_model.predict(numeric_vector)
+	prediction = loaded_model.predict(input_data_reshaped)
 	
 	print(input_data_as_numpy_array)
 	print(input_data_reshaped)

@@ -179,8 +179,8 @@ def EA_Alpha_thal_prediction(input_data):
 	# reshape the array as we are predicting for one instance
 	input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 	
-	
-	prediction = loaded_model.predict(input_data_reshaped)
+	numeric_vector = vectorizer.transform(input_data_reshaped) 
+	prediction = loaded_model.predict(numeric_vector)
 	
 	print(input_data_as_numpy_array)
 	print(input_data_reshaped)

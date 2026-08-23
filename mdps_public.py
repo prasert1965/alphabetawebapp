@@ -107,7 +107,7 @@ def main():
 				with col4:
 		   			RDW = st.text_input('RDW (fl)')
 				with col1:
-					HbAII = st.text_input('HbAII (%)')				
+					HBAII = st.text_input('HBAII (%)')			
 				
 				# code for Prediction
 				diagnosis = ''
@@ -122,7 +122,7 @@ def main():
 				
 				if st.button('Prediction Beta thal. Click'):        
 		   		    
-					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HbAII])  
+					diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW, HBAII])  
 				
 				st.success(diagnosis)
        

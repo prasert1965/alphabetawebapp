@@ -135,7 +135,7 @@ def main():
 						rdw = float(RDW) if RDW else 0.0
 						hbaii = float(HBAII) if HBAII else 0.0
 					    
-						st.success("")
+						st.success("Your data have been predicted successfully.")
 					except ValueError:
   						st.error("Please enter a valid number.")
 					

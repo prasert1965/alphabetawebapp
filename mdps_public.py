@@ -138,8 +138,7 @@ def main():
 					except ValueError:
   						st.error("Please enter a valid number.")
 					
-  				st.error("Please enter a valid number.")
-					
+  								
 					diagnosis = EA_Alpha_thal_prediction([age, hct, hgb, rbc, mcv, mch, mchc, rdw, hbaii])  
 				
 				st.success(diagnosis)

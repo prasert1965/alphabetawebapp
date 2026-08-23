@@ -99,7 +99,7 @@ def main():
 				with col3:
 		   			HGB = st.text_input('Hemaglobin (g/dl)')
 				with col4:
-		   			RBC = st.text_input('RBC count(10^6 cells/cumm')
+		   			RBC = st.text_input('RBC (10^6 cells/cumm')
 				with col5:
 		   			MCV = st.text_input('MCV (fl)')
 				with col1:

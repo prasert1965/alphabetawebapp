@@ -123,7 +123,7 @@ def main():
 				#st.success(diagnosis)
 				
 				if st.button('Prediction Beta thal. Click'):        
-		   		try:
+		   		 try:
 					age = float(AGE) if AGE else 0.0
 					hct = float(HCT) if HCT else 0.0
 					hgb = float(HGB) if HGB else 0.0

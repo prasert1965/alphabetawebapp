@@ -110,7 +110,14 @@ def main():
 		   			RDW = st.text_input('RDW (fl)')
 				with col1:
 					HBAII = st.text_input('HBAII (%)')			
-					age = float(AGE)
+					
+				# code for Prediction
+				diagnosis = ''
+    
+				# creating a button for Prediction 
+        
+				#if st.button('Prediction result Pls. Click'):        
+		   		    age = float(AGE)
 					hct = float(HCT)
 					hgb = float(HGB)
 					rbc = float(RBC)
@@ -119,13 +126,6 @@ def main():
 					mchc = float(MCHC)
 					rdw = float(RDW)
 					hbaii = float(HBAII)
-				# code for Prediction
-				diagnosis = ''
-    
-				# creating a button for Prediction 
-        
-				#if st.button('Prediction result Pls. Click'):        
-		   		    
 				#	diagnosis = EA_Alpha_thal_prediction([AGE, HCT, HGB, RBC, MCV, MCH, MCHC, RDW])               
 				
 				#st.success(diagnosis)

@@ -124,15 +124,15 @@ def main():
 				
 				if st.button('Prediction Beta thal. Click'):        
 		   		    try:
-						age = float(AGE)
-						hct = float(HCT)
-						hgb = float(HGB)
-						rbc = float(RBC)
-						mcv = float(MCV)
-						mch = float(MCH)
-						mchc = float(MCHC)
-						rdw = float(RDW)
-						hbaii = float(HBAII)
+						age = float(AGE) if AGE else 0.0
+						hct = float(HCT) if HCT else 0.0
+						hgb = float(HGB) if HGB else 0.0
+						rbc = float(RBC) if RBC else 0.0
+						mcv = float(MCV) if MCV else 0.0
+						mch = float(MCH) if MCH else 0.0
+						mchc = float(MCHC) if MCHC else 0.0
+						rdw = float(RDW) if RDW else 0.0
+						hbaii = float(HBAII) if HBAII else 0.0
 					diagnosis = EA_Alpha_thal_prediction([age, hct, hgb, rbc, mcv, mch, mchc, rdw, hbaii])  
 				
 				st.success(diagnosis)

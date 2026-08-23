@@ -72,7 +72,7 @@ def main():
 	
 	if choice == "Home":
 		st.subheader("This is Web app for prediction Beta thalassemia carrier")
-		st.write('In 2026, From Phrae Adaboost model on alpha vs beta Dataset demonstrated acc 97% sen 100% spec 95% AUC 0.974.')
+		st.write('In 2026, From Phrae Adaboost model on alpha vs beta Dataset demonstrated acc 96% sen 100% spec 91% AUC 0.974.')
         	
 	elif choice == "Login":
 		st.subheader("Beta thalassemia carrier prediction using ML")
